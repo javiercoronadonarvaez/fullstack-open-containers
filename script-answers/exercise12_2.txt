@@ -1,0 +1,16 @@
+Script started on Wed Nov 20 13:25:53 2024
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                       [0m[27m[24m[J(base) j.coronado.narvaez@AMAC6P9TW04FN part12-containers-applications % [K[?2004h[7mdocker container run -it ubuntu bash[27m[36D[27md[27mo[27mc[27mk[27me[27mr[27m [27mc[27mo[27mn[27mt[27ma[27mi[27mn[27me[27mr[27m [27mr[27mu[27mn[27m [27m-[27mi[27mt[27m [27mu[27mb[27mu[27mn[27mt[27mu[27m [27mb[27ma[27ms[27mh[?2004l
+[?2004h]0;root@1b50a79433d8: /root@1b50a79433d8:/# ls
+[?2004l[0m[01;36mbin[0m  [01;34mboot[0m  [01;34mdev[0m  [01;34metc[0m  [01;34mhome[0m  [01;36mlib[0m  [01;34mmedia[0m  [01;34mmnt[0m  [01;34mopt[0m  [01;34mproc[0m  [01;34mroot[0m  [01;34mrun[0m  [01;36msbin[0m  [01;34msrv[0m  [01;34msys[0m  [30;42mtmp[0m  [01;34musr[0m  [01;34mvar[0m
+[?2004h]0;root@1b50a79433d8: /root@1b50a79433d8:/# ls usr/r src/app
+[?2004lls: cannot access 'usr/src/app': No such file or directory
+[?2004h]0;root@1b50a79433d8: /root@1b50a79433d8:/# cle   mkdir usr/src/app
+[?2004l[?2004h]0;root@1b50a79433d8: /root@1b50a79433d8:/# mkdir usr/src/app[3Pls usr/src/app
+[?2004l[?2004h]0;root@1b50a79433d8: /root@1b50a79433d8:/# touc    ls usr/src/app/index.js[1P[1P[1@t[1@o[1@u[1@c[1@h 
+[?2004l[?2004h]0;root@1b50a79433d8: /root@1b50a79433d8:/# [Ktouch usr/src/app/index.js[12Pls usr/src/app
+[?2004lindex.js
+[?2004h]0;root@1b50a79433d8: /root@1b50a79433d8:/# exit
+[?2004lexit
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                       [0m[27m[24m[J(base) j.coronado.narvaez@AMAC6P9TW04FN part12-containers-applications % [K[?2004heexit[?2004l
+
+Script done on Wed Nov 20 13:27:35 2024
