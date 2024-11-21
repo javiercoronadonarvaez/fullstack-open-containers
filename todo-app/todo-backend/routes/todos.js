@@ -18,8 +18,9 @@ router.post("/", async (req, res) => {
   // const todos = await Todo.find({});
   const added_todos = await getAsync("added_todos");
   if (!added_todos) {
-    const todos = await Todo.find({});
-    await setAsync("added_todos", todos.length);
+    // const todos = await Todo.find({});
+    // await setAsync("added_todos", todos.length);
+    await setAsync("added_todos", 1);
   } else {
     await setAsync("added_todos", Number(added_todos) + 1);
   }
