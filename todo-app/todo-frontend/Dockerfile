@@ -12,11 +12,8 @@ ENV VITE_BACKEND_URL=http://localhost:3000
 # Install dependencies
 RUN npm ci
 
-# Run the tests in this build stage
-FROM build-stage AS test-stage
-
 # Run tests
-RUN npm run test 
+RUN npm test 
 
 # If the tests fail, the build will fail, so proceed only if the tests pass
 
