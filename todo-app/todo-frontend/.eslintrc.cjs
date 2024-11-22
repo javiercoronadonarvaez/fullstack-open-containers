@@ -23,4 +23,7 @@ module.exports = {
     ],
     "react/prop-types": 0,
   },
+  globals: {
+    module: "readonly", // Define 'module' as a global variable
+  },
 };
