@@ -3,19 +3,31 @@ FROM node:20 AS build-stage
 
 WORKDIR /usr/src/app
 
+# Copy the whole application
 COPY . .
 
+# Set environment variables (e.g., for the backend URL)
 ENV VITE_BACKEND_URL=http://localhost:3000
 
+# Install dependencies
 RUN npm ci
 
+# Run the tests in this build stage
+FROM build-stage AS test-stage
+
+# Run tests
+RUN npm run test 
+
+# If the tests fail, the build will fail, so proceed only if the tests pass
+
+# The next stage is the production build
+FROM build-stage AS production-stage
+
+# Run the production build
 RUN npm run build
 
-# This is a new stage, everything before this is gone, except for the files that we want to COPY
-
+# Now we switch to the Nginx image to serve the app
 FROM nginx:1.25-alpine
 
-# COPY the directory dist from the build-stage to /usr/share/nginx/html
-# The target location here was found from the Docker hub page
-
-COPY --from=build-stage /usr/src/app/dist /usr/share/nginx/html
+# Copy the build output from the build stage to the Nginx container
+COPY --from=production-stage /usr/src/app/dist /usr/share/nginx/html
