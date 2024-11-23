@@ -15,9 +15,29 @@ services:
     image: redis:alpine
     ports:
       - 6379:6379
-    command: ["redis-server", "--appendonly", "yes"] # Overwrite the CMD
+    command: ["redis-server", "--appendonly", "yes"]
     volumes:
       - redis_data:/data
+
+  server:
+    image: backend-dev
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules # To avoid overriding node_modules
+    ports:
+      - 4000:3000 # Adjust if needed for your backend app
+    environment:
+      - MONGO_URL=mongodb://root:example@mongo:27017/the_database?authSource=admin
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - mongo
+      - redis
+
+  debug-helper:
+    image: busybox
 
 volumes:
   mongo_data:
