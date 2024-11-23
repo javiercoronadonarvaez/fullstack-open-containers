@@ -28,7 +28,7 @@ services:
       - ./:/usr/src/app
       - /usr/src/app/node_modules # To avoid overriding node_modules
     ports:
-      - 4000:3000 # Adjust if needed for your backend app
+      - 3000:3000 # Adjust if needed for your backend app
     environment:
       - MONGO_URL=mongodb://root:example@mongo:27017/the_database?authSource=admin
       - REDIS_URL=redis://redis:6379
