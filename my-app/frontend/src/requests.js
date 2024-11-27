@@ -1,9 +1,13 @@
 // import axios from "axios";
 import axios from "../src/util/apiClient";
 
-const baseUrl = "/api/blogs";
-const loginUrl = "/api/login";
-const usersUrl = "/api/users";
+// const baseUrl = "/api/blogs";
+// const loginUrl = "/api/login";
+// const usersUrl = "/api/users";
+
+const baseUrl = "/blogs";
+const loginUrl = "/login";
+const usersUrl = "/users";
 
 let token = null;
 
