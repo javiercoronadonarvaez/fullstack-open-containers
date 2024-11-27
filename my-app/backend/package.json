@@ -4,8 +4,8 @@
   "description": "Blog application from part4 fullstack-open course",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node index.js",
-    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "cross-env  NODE_ENV=test node --test",
     "start:test": "NODE_ENV=test node index.js",
     "lint": "eslint .",

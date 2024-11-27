@@ -1,5 +1,6 @@
 const blogsRouter = require('express').Router()
-const Blog = require('../models/blog')
+// const Blog = require('../mongo/models/blog')
+const { Blog } = require('../mongo')
 const middleware = require('../utils/middleware')
 
 blogsRouter.get('/', async (request, response) => {

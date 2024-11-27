@@ -1,5 +1,6 @@
 const logger = require('./logger')
-const User = require('../models/user')
+// const User = require('../mongo/models/user')
+const { User } = require('../mongo')
 const jwt = require('jsonwebtoken')
 
 const tokenExtractor = (request, response, next) => {
