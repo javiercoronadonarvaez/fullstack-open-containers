@@ -5,14 +5,24 @@ services:
     build:
       context: . # The context will pick this directory as the "build context"
       dockerfile: ./todo-frontend/Dockerfile # This will simply tell which dockerfile to read
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-    ports:
-      - 8000:80
+    # volumes:
+    #   - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    # ports:
+    #   - 8000:80
     container_name: todo-frontend-prod # This will name the container hello-front-dev
     depends_on:
       server:
         condition: service_started
+
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: reverse-proxy
+    depends_on:
+      - app # wait for the frontend container to be started
 
   # BACKEND
   server:
