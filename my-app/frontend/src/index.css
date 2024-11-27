@@ -1,0 +1,73 @@
+.notification {
+  color: green;
+  background: lightgrey;
+  display: inline-block;
+  font-size: 20px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: red;
+  background: lightgrey;
+  display: inline-block;
+  font-size: 20px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.blogShowLimited {
+  display: block;
+  font-size: 20px;
+  border-style: solid;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+
+.blogShowAll {
+  display: block;
+  font-size: 20px;
+  border-style: solid;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+
+.blogLink {
+  display: block;
+  font-size: 20px;
+  border-style: solid;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+
+.input {
+  display: block;
+  font-size: 15px;
+  border-style: solid;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+
+.menu {
+  margin-right: 5px;
+}
+
+button {
+  font-size: small;
+  margin-left: 5px;
+  box-sizing: border-box;
+}
+
+li {
+  font-size: large;
+  margin-left: 10px;
+  box-sizing: border-box;
+}
