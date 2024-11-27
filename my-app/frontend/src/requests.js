@@ -1,4 +1,5 @@
-import axios from "axios";
+// import axios from "axios";
+import axios from "../src/util/apiClient";
 
 const baseUrl = "/api/blogs";
 const loginUrl = "/api/login";
