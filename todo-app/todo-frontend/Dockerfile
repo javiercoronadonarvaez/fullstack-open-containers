@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 COPY . .
 
 # Set environment variables (e.g., for the backend URL)
-ENV VITE_BACKEND_URL=http://server:3000
+ENV VITE_BACKEND_URL=http://localhost:3000
 
 # Install dependencies
 RUN npm ci
