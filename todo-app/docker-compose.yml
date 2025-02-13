@@ -4,8 +4,6 @@ services:
     build:
       context: ./todo-frontend/ # The context will pick this directory as the "build context"
       dockerfile: Dockerfile # This will simply tell which dockerfile to read
-    ports:
-      - 8000:80
     container_name: todo-frontend-prod # This will name the container hello-front-dev
     depends_on:
       server:
@@ -19,8 +17,6 @@ services:
     volumes:
       - ./todo-backend:/usr/src/app
       - /usr/src/app/node_modules # To avoid overriding node_modules
-    ports:
-      - 3000:3000 # Adjust if needed for your backend app
     container_name: todo-backend-prod
     environment:
       - MONGO_URL=mongodb://root:example@mongo:27017/the_database?authSource=admin
